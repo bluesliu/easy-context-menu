@@ -73,13 +73,16 @@ let node;
 const popup = (menu, x=0, y=0) => {
     if(!node){
         node = document.createElement('div');
-        node.style.position = 'absolute';
+        node.style.position = 'fixed';
         node.style.zIndex = '1000';
         document.body.appendChild(node);
         document.addEventListener('mousedown', onMouseDown);
     }
 
     ReactDOM.render(menu, node, ()=>{
+        const nodeRect = node.getBoundingClientRect();
+        x = Math.min(x, window.innerWidth-nodeRect.width);
+        y = Math.min(y, window.innerHeight-nodeRect.height);
         node.style.left = `${x}px`;
         node.style.top = `${y}px`;
     });

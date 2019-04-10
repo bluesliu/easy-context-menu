@@ -29,14 +29,14 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <button onClick={(e)=>{this.showMenu(e)}}>show menu</button>
+                <button onClick={(e)=>{this.showMenu(e)}} style={{marginLeft:500}}>show menu</button>
             </div>
         )
     }
 
     showMenu(e){
         const rect = e.target.getBoundingClientRect();
-        Menu.Popup(this.menu, rect.x, rect.bottom)
+        Menu.Popup(this.menu, rect.x, rect.bottom);
     }
 }
 

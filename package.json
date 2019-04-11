@@ -1,6 +1,6 @@
 {
   "name": "easy-context-menu",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React 实现的菜单组件",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",

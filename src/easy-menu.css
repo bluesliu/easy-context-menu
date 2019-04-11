@@ -1,4 +1,6 @@
 .easy-menu {
+    --minWidth: 100px;
+    --maxWidth: 300px;
     --borderColor: #383838;
     --bgColor: #535353;
     --bgColor-hover: #777777;
@@ -9,11 +11,14 @@
     --fontSize: 14px;
     --shadow: 0 2px 8px rgba(0,0,0,0.3);
 
+    --itemHeight: 22px;
+    --itemPadding: 5px 12px;
+
     margin: 0;
     padding: 4px 0;
     width: fit-content;
-    min-width: 100px;
-    max-width: 300px;
+    min-width: var(--minWidth);
+    max-width: var(--maxWidth);
 
     border-style: solid;
     border-width: 1px;
@@ -29,8 +34,8 @@
 }
 
 .easy-menu-item {
-    padding: 5px 12px;
-    line-height: 22px;
+    padding: var(--itemPadding);
+    line-height: var(--itemHeight);
     box-sizing: border-box;
     overflow: hidden;
     text-overflow:ellipsis;
